@@ -1,0 +1,15 @@
+scmVersion {
+    ignoreUncommittedChanges = false
+    tag {
+        prefix = 'release'
+    }
+    versionIncrementer 'incrementMinor'
+    branchVersionIncrementer = [
+            'hotfix-.*': { c -> c.currentVersion.incrementPatchVersion() }
+    ]
+    branchVersionCreator = [
+            'topic-.*': 'versionWithBranch'
+    ]
+}
+
+release.dependsOn jacocoTestCoverageVerification
