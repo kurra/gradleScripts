@@ -1,0 +1,13 @@
+project.version = scmVersion.version
+
+ext.scmRevision = "git rev-parse --short HEAD".execute().text.trim()
+ext.manifestAttributes = [
+        "Manifest-Version"       : "1.0",
+        "Implementation-Title"   : title,
+        "Implementation-Version" : project.version,
+        "Implementation-Revision": scmRevision,
+        "Built-By"               : "Yubhas Technologies Ltd.",
+        "Created-By"             : System.getProperty('java.version') + ' (' + System.getProperty('java.vendor') + ')',
+        "Built-With"             : "gradle-${project.getGradle().getGradleVersion()}, groovy-${GroovySystem.getVersion()}",
+        "Build-Time"             : "${new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")}"
+]
