@@ -1,8 +1,16 @@
-download {
-    src 'https://raw.githubusercontent.com/checkstyle/checkstyle/master/src/main/resources/google_checks.xml'
-    dest buildDir/checkstyle
+task downloadCheckStyleFile {
+    doLast {
+        download {
+            src 'https://raw.githubusercontent.com/checkstyle/checkstyle/master/src/main/resources/google_checks.xml'
+            dest buildDir
+            overwrite true
+        }
+    }
 }
 
+
 checkstyle {
-    config project.resources.text.fromFile("buildDir/checkstyle")
+    config project.resources.text.fromFile("$buildDir/google_checks.xml")
 }
+
+checkstyleMain.dependsOn downloadCheckStyleFile
