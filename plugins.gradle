@@ -4,7 +4,7 @@ apply plugin: "maven"
 apply plugin: "checkstyle"
 apply plugin: "jacoco"
 apply plugin: "pl.allegro.tech.build.axion-release"
-apply plugin: "de.undercouch.download'
+apply plugin: "de.undercouch.download"
 apply from: "https://raw.githubusercontent.com/kurra/gradleScripts/master/configurations.gradle"
 apply from: "https://raw.githubusercontent.com/kurra/gradleScripts/master/compile.gradle"
 apply from: "https://raw.githubusercontent.com/kurra/gradleScripts/master/checkstyle.gradle"
