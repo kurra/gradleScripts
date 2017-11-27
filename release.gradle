@@ -1,9 +1,5 @@
 scmVersion {
     ignoreUncommittedChanges = false
-    tag {
-        prefix = 'release'
-    }
-    versionIncrementer 'incrementMinor'
 }
 
 release.dependsOn jacocoTestCoverageVerification
