@@ -4,4 +4,3 @@ scmVersion {
 
 release.dependsOn jacocoTestCoverageVerification
 
-install.dependsOn release
