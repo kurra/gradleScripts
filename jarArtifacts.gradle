@@ -1,0 +1,26 @@
+jar {
+    manifest {
+        attributes = manifestAttributes
+    }
+}
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+    manifest {
+        attributes = manifestAttributes
+    }
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    manifest {
+        attributes = manifestAttributes
+    }
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives sourcesJar
+    archives javadocJar
+}
