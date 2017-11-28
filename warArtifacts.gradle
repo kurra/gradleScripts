@@ -1,0 +1,5 @@
+war {
+    manifest {
+        attributes=manifestAttributes
+    }
+}
