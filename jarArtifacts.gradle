@@ -24,3 +24,5 @@ artifacts {
     archives sourcesJar
     archives javadocJar
 }
+
+install.dependsOn jacocoTestCoverageVerification
