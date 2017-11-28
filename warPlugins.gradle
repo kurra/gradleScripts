@@ -11,7 +11,7 @@ apply from: "https://raw.githubusercontent.com/kurra/gradleScripts/master/checks
 apply from: "https://raw.githubusercontent.com/kurra/gradleScripts/master/manifest.gradle"
 apply from: "$rootDir/gradle/libraries.gradle"
 apply from: "$rootDir/gradle/coverage.gradle"
-apply from: "$rootDir/gradle/artifacts.gradle"
+apply from: "https://raw.githubusercontent.com/kurra/gradleScripts/master/warArtifacts.gradle"
 apply from: "https://raw.githubusercontent.com/kurra/gradleScripts/master/release.gradle"
 
 repositories {
