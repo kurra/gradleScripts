@@ -47,11 +47,11 @@ ext {
             hibernateCore  : "org.hibernate:hibernate-core:5.2.10.Final",
             aspectj        : "org.aspectj:aspectjweaver:1.8.13",
             stripe         : "com.stripe:stripe-java:5.8.0",
-            email           : "javax.mail:mail:1.4.7",
+            email          : "javax.mail:mail:1.4.7",
             hibernatejpaApi: "org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final",
             servletApi     : "javax.servlet:javax.servlet-api:3.1.0",
             httpClient     : "org.apache.httpcomponents:httpclient:4.5.2",
-            testing        : [
+            test           : [
                     "junit:junit:+",
                     "org.easymock:easymock:+",
                     "org.springframework:spring-test:$springVersion",
