@@ -9,7 +9,7 @@ apply from: "https://raw.githubusercontent.com/kurra/gradleScripts/master/config
 apply from: "https://raw.githubusercontent.com/kurra/gradleScripts/master/compile.gradle"
 apply from: "https://raw.githubusercontent.com/kurra/gradleScripts/master/checkstyle.gradle"
 apply from: "https://raw.githubusercontent.com/kurra/gradleScripts/master/manifest.gradle"
-apply from: "$rootDir/gradle/libraries.gradle"
+apply from: "https://raw.githubusercontent.com/kurra/gradleScripts/master/libraries.gradle"
 apply from: "$rootDir/gradle/coverage.gradle"
 apply from: "https://raw.githubusercontent.com/kurra/gradleScripts/master/warArtifacts.gradle"
 apply from: "https://raw.githubusercontent.com/kurra/gradleScripts/master/release.gradle"
