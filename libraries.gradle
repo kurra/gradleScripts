@@ -1,5 +1,5 @@
 ext {
-    springVersion = '5.0.1.RELEASE'
+    springVersion = '5.0.2.RELEASE'
     slf4jVersion = "1.7.25"
 
     libs = [
@@ -25,6 +25,7 @@ ext {
             ],
             spring         : [
                     context: "org.springframework:spring-context:$springVersion",
+                    context-support: "org.springframework:spring-context-support:$springVersion",
                     web    : "org.springframework:spring-web:$springVersion",
                     orm    : "org.springframework:spring-orm:$springVersion",
                     webMvc : "org.springframework:spring-webmvc:$springVersion",
