@@ -1,5 +1,5 @@
 ext {
-    springVersion = '5.0.2.RELEASE'
+    springVersion = '5.0.3.RELEASE'
     slf4jVersion = "1.7.25"
 
     libs = [
@@ -29,7 +29,7 @@ ext {
                     web    : "org.springframework:spring-web:$springVersion",
                     orm    : "org.springframework:spring-orm:$springVersion",
                     webMvc : "org.springframework:spring-webmvc:$springVersion",
-                    dataJpa: "org.springframework.data:spring-data-jpa:1.11.3.RELEASE",
+                    dataJpa: "org.springframework.data:spring-data-jpa:2.0.3.RELEASE",
             ],
             commons        : [
                     lang         : "org.apache.commons:commons-lang3:3.5",
@@ -39,7 +39,7 @@ ext {
                     pool         : "commons-pool:commons-pool:1.6",
             ],
             jackson        : [
-                    "com.fasterxml.jackson.core:jackson-core:2.8.2",
+                    "com.fasterxml.jackson.core:jackson-core:2.9.4",
             ],
             database       : [
                     mysql: "mysql:mysql-connector-java:6.0.6",
@@ -58,7 +58,7 @@ ext {
                     "org.springframework:spring-test:$springVersion",
             ],
             gradlePlugins  : [
-                    axion   : "pl.allegro.tech.build:axion-release-plugin:1.8.1",
+                    axion   : "pl.allegro.tech.build:axion-release-plugin:1.8.3",
                     download: "de.undercouch:gradle-download-task:3.3.0",
 
             ],
