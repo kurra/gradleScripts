@@ -1,7 +1,7 @@
 task downloadCheckStyleFile {
     doLast {
         download {
-            src 'https://raw.githubusercontent.com/checkstyle/checkstyle/master/src/main/resources/google_checks.xml'
+            src 'https://raw.githubusercontent.com/kurra/checkstyle/master/google_checks.xml'
             dest buildDir
             overwrite true
         }
