@@ -10,7 +10,6 @@ task downloadCheckStyleFile {
 
 
 checkstyle {
-    toolVersion = '8.5'
     config project.resources.text.fromFile("$buildDir/google_checks.xml")
 }
 
