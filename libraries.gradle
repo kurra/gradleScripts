@@ -4,7 +4,7 @@ ext {
 
     libs = [
             yubhas         : [
-                    logging: "com.yubhas:logging:0.6.3",
+                    logging: "com.yubhas:logging:0.6.4",
                     common : "com.yubhas:common:1.11.2",
                     crypto : "com.yubhas:crypto:1.7.1",
                     email  : "com.yubhas:email-service:1.2.1",
