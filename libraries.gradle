@@ -1,5 +1,5 @@
 ext {
-    springVersion = '5.0.3.RELEASE'
+    springVersion = '5.0.4.RELEASE'
     slf4jVersion = "1.7.25"
 
     libs = [
