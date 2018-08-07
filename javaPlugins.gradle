@@ -8,7 +8,6 @@ apply plugin: 'findbugs'
 apply plugin: 'jdepend'
 apply plugin: 'info.solidsoft.pitest'
 apply plugin: "pl.allegro.tech.build.axion-release"
-apply plugin: "de.undercouch.download"
 apply from: "https://raw.githubusercontent.com/kurra/gradleScripts/master/configurations.gradle"
 apply from: "https://raw.githubusercontent.com/kurra/gradleScripts/master/compile.gradle"
 apply from: "https://raw.githubusercontent.com/kurra/gradleScripts/master/checkstyle.gradle"

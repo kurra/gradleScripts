@@ -1,17 +1,4 @@
-//task downloadCheckStyleFile {
-//    doLast {
-//        download {
-//            src 'https://raw.githubusercontent.com/kurra/checkstyle/master/google_checks.xml'
-//            dest buildDir
-//            overwrite true
-//        }
-//    }
-//}
-
-
 checkstyle {
     toolVersion = '8.11'
     config = resources.text.fromUri("https://raw.githubusercontent.com/kurra/checkstyle/master/google_checks.xml")
 }
-
-//checkstyleMain.dependsOn downloadCheckStyleFile
