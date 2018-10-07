@@ -1,10 +1,10 @@
 ext {
-    springVersion = '5.0.8.RELEASE'
+    springVersion = '5.1.0.RELEASE'
     slf4jVersion = "1.7.25"
 
     libs = [
             yubhas         : [
-                    logging: "com.yubhas:logging:0.6.4",
+                    logging: "com.yubhas:logging:0.6.5",
                     common : "com.yubhas:common:1.11.3",
                     crypto : "com.yubhas:crypto:1.7.2",
                     email  : "com.yubhas:email-service:1.2.2",
@@ -29,29 +29,29 @@ ext {
                     web           : "org.springframework:spring-web:$springVersion",
                     orm           : "org.springframework:spring-orm:$springVersion",
                     webMvc        : "org.springframework:spring-webmvc:$springVersion",
-                    dataJpa       : "org.springframework.data:spring-data-jpa:2.0.9.RELEASE",
+                    dataJpa       : "org.springframework.data:spring-data-jpa:2.1.0.RELEASE",
             ],
             commons        : [
-                    lang         : "org.apache.commons:commons-lang3:3.7",
+                    lang         : "org.apache.commons:commons-lang3:3.8.1",
                     configuration: "commons-configuration:commons-configuration:1.10",
                     codec        : "commons-codec:commons-codec:1.11",
                     dpcp         : "commons-dbcp:commons-dbcp:1.4",
                     pool         : "commons-pool:commons-pool:1.6",
             ],
             jackson        : [
-                    "com.fasterxml.jackson.core:jackson-core:2.9.6",
-                    "com.fasterxml.jackson.core:jackson-annotations:2.9.6",
-                    "com.fasterxml.jackson.core:jackson-databind:2.9.6",
+                    "com.fasterxml.jackson.core:jackson-core:2.9.7",
+                    "com.fasterxml.jackson.core:jackson-annotations:2.9.7",
+                    "com.fasterxml.jackson.core:jackson-databind:2.9.7",
             ],
             database       : [
                     mysql: "mysql:mysql-connector-java:8.0.12",
                     hsql : "org.hsqldb:hsqldb:+",
             ],
-            hibernateCore  : "org.hibernate:hibernate-core:5.3.4.Final",
+            hibernateCore  : "org.hibernate:hibernate-core:5.3.6.Final",
             aspectj        : "org.aspectj:aspectjweaver:1.9.1",
-            stripe         : "com.stripe:stripe-java:6.3.0",
+            stripe         : "com.stripe:stripe-java:7.0.0",
             email          : "javax.mail:mail:1.4.7",
-            emailApi       : "javax.mail:javax.mail-api:1.6.1",
+            emailApi       : "javax.mail:javax.mail-api:1.6.2",
             hibernatejpaApi: "org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.2.Final",
             servletApi     : "javax.servlet:javax.servlet-api:3.1.0",
             httpClient     : "org.apache.httpcomponents:httpclient:4.5.6",
@@ -61,7 +61,7 @@ ext {
                     "org.springframework:spring-test:$springVersion",
             ],
             gradlePlugins  : [
-                    axion : "pl.allegro.tech.build:axion-release-plugin:1.9.2",
+                    axion : "pl.allegro.tech.build:axion-release-plugin:1.9.3",
                     pitest: "info.solidsoft.gradle.pitest:gradle-pitest-plugin:1.3.0"
             ],
     ]
