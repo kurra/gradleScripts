@@ -1,13 +1,3 @@
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath "pl.allegro.tech.build:axion-release-plugin:1.9.3"
-        classpath 'info.solidsoft.gradle.pitest:gradle-pitest-plugin:1.3.0'
-    }
-}
-
 apply plugin: "idea"
 apply plugin: "java"
 apply plugin: "maven"
@@ -27,6 +17,17 @@ apply from: "https://raw.githubusercontent.com/kurra/gradleScripts/master/librar
 apply from: "$rootDir/gradle/coverage.gradle"
 apply from: "https://raw.githubusercontent.com/kurra/gradleScripts/master/jarArtifacts.gradle"
 apply from: "https://raw.githubusercontent.com/kurra/gradleScripts/master/release.gradle"
+
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "pl.allegro.tech.build:axion-release-plugin:1.9.3"
+        classpath 'info.solidsoft.gradle.pitest:gradle-pitest-plugin:1.3.0'
+    }
+}
 
 repositories {
     mavenLocal()
