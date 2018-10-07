@@ -1,26 +1,13 @@
-//apply plugin: "idea"
-//apply plugin: "java"
-//apply plugin: "maven"
-//apply plugin: "checkstyle"
-//apply plugin: "jacoco"
-//apply plugin: 'pmd'
-//apply plugin: 'findbugs'
-//apply plugin: 'jdepend'
+apply plugin: "idea"
+apply plugin: "java"
+apply plugin: "maven"
+apply plugin: "checkstyle"
+apply plugin: "jacoco"
+apply plugin: 'pmd'
+apply plugin: 'findbugs'
+apply plugin: 'jdepend'
 //apply plugin: 'info.solidsoft.pitest'
 //apply plugin: "pl.allegro.tech.build.axion-release"
-
-plugins {
-    id "idea"
-    id "java"
-    id "maven"
-    id "checkstyle"
-    id "jacoco"
-    id "pmd"
-    id "findbugs"
-    id "jdepend"
-    id "pl.allegro.tech.build.axion-release" version "1.9.3"
-    id "info.solidsoft.pitest" version "1.3.0"
-}
 
 apply from: "https://raw.githubusercontent.com/kurra/gradleScripts/master/configurations.gradle"
 apply from: "https://raw.githubusercontent.com/kurra/gradleScripts/master/compile.gradle"
