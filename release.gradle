@@ -1,5 +1,5 @@
 buildscript {
-    apply from: "$rootDir/gradle/repos.gradle", to: buildscript
+    apply from: "https://raw.githubusercontent.com/kurra/gradleScripts/master/repos.gradle", to: buildscript
     dependencies {
         classpath("pl.allegro.tech.build:axion-release-plugin:1.10.0")
     }
