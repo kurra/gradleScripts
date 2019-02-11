@@ -79,3 +79,5 @@ test {
         events "passed", "skipped", "failed"
     }
 }
+
+test.finalizedBy(jacocoTestReport)

@@ -11,4 +11,4 @@ scmVersion {
     ignoreUncommittedChanges = false
 }
 
-release.dependsOn jacocoTestCoverageVerification
+release.dependsOn(build)
