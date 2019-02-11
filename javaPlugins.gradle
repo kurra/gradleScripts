@@ -18,9 +18,3 @@ apply from: "https://raw.githubusercontent.com/kurra/gradleScripts/master/librar
 apply from: "$rootDir/gradle/coverage.gradle"
 apply from: "https://raw.githubusercontent.com/kurra/gradleScripts/master/jarArtifacts.gradle"
 apply from: "https://raw.githubusercontent.com/kurra/gradleScripts/master/release.gradle"
-
-
-repositories {
-    mavenLocal()
-    mavenCentral()
-}
