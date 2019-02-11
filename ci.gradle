@@ -1,5 +1,5 @@
 buildscript {
-    apply from: "$rootDir/gradle/repos.gradle", to: buildscript
+    apply from: "https://raw.githubusercontent.com/kurra/gradleScripts/master/repos.gradle", to: buildscript
     dependencies {
         classpath("info.solidsoft.gradle.pitest:gradle-pitest-plugin:1.4.0")
         classpath("org.owasp:dependency-check-gradle:4.0.2")
