@@ -1,1 +1,81 @@
-task ci(dependsOn: ['jacocoTestCoverageVerification', 'pitest'])
+buildscript {
+    apply from: "$rootDir/gradle/repos.gradle", to: buildscript
+    dependencies {
+        classpath("info.solidsoft.gradle.pitest:gradle-pitest-plugin:1.4.0")
+        classpath("org.owasp:dependency-check-gradle:4.0.2")
+        classpath("gradle.plugin.com.github.spotbugs:spotbugs-gradle-plugin:1.6.9")
+    }
+}
+
+apply plugin: "checkstyle"
+apply plugin: "jacoco"
+apply plugin: "pmd"
+apply plugin: info.solidsoft.gradle.pitest.PitestPlugin
+apply plugin: org.owasp.dependencycheck.gradle.DependencyCheckPlugin
+apply plugin: com.github.spotbugs.SpotBugsPlugin
+
+def getSourceSetsForCodeAnalysis() {
+    return sourceSets.findAll { set -> set.name != "test" }
+}
+
+jacoco {
+//    toolVersion = "0.8.2"
+}
+
+apply from: "$rootDir/gradle/coverage.gradle"
+
+jacocoTestReport {
+
+    getSourceDirectories().from((getSourceSetsForCodeAnalysis().allSource.srcDirs))
+}
+
+checkstyle {
+//    toolVersion = "8.16"
+    config = resources.text.fromUri("https://raw.githubusercontent.com/kurra/checkstyle/master/google_checks.xml")
+    sourceSets = getSourceSetsForCodeAnalysis()
+}
+
+tasks.withType(Checkstyle) {
+    reports {
+        xml.enabled false
+        html.enabled true
+    }
+}
+
+pmd {
+    sourceSets = getSourceSetsForCodeAnalysis()
+}
+
+tasks.withType(Pmd) {
+    reports {
+        xml.enabled false
+        html.enabled true
+    }
+}
+
+spotbugs {
+    sourceSets = getSourceSetsForCodeAnalysis()
+}
+
+tasks.withType(com.github.spotbugs.SpotBugsTask) {
+    reports {
+        xml.enabled false
+        html.enabled true
+    }
+}
+
+dependencyCheck {
+    failBuildOnCVSS = 2
+    suppressionFile = "${rootDir}/owasp-suppressions.xml"
+}
+
+check.dependsOn(dependencyCheckAnalyze)
+check.dependsOn(jacocoTestReport)
+check.dependsOn(jacocoTestCoverageVerification)
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
