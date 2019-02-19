@@ -1,0 +1,14 @@
+apply from: "https://raw.githubusercontent.com/kurra/gradleScripts/master/repos.gradle"
+
+apply plugin: "idea"
+apply plugin: "java"
+apply plugin: "maven"
+
+apply from: "https://raw.githubusercontent.com/kurra/gradleScripts/master/configurations.gradle"
+apply from: "https://raw.githubusercontent.com/kurra/gradleScripts/master/compile.gradle"
+apply from: "https://raw.githubusercontent.com/kurra/gradleScripts/master/ci.gradle"
+apply from: "https://raw.githubusercontent.com/kurra/gradleScripts/master/release.gradle"
+apply from: "https://raw.githubusercontent.com/kurra/gradleScripts/master/manifest.gradle"
+apply from: "https://raw.githubusercontent.com/kurra/gradleScripts/master/libraries.gradle"
+apply from: "https://raw.githubusercontent.com/kurra/gradleScripts/master/jarArtifacts.gradle"
+apply from: "https://raw.githubusercontent.com/kurra/gradleScripts/master/springBoot.gradle"

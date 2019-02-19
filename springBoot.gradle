@@ -1,0 +1,8 @@
+buildscript {
+    apply from: "https://raw.githubusercontent.com/kurra/gradleScripts/master/repos.gradle", to: buildscript
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.1.3.RELEASE")
+    }
+}
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
