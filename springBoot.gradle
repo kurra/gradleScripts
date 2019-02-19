@@ -4,5 +4,5 @@ buildscript {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:2.1.3.RELEASE")
     }
 }
-apply plugin: 'org.springframework.boot'
-apply plugin: 'io.spring.dependency-management'
+apply plugin: org.springframework.boot.gradle.plugin.SpringBootPlugin
+apply plugin: io.spring.gradle.dependencymanagement.DependencyManagementPlugin
