@@ -4,11 +4,11 @@ ext {
 
     libs = [
             yubhas         : [
-                    logging: "com.yubhas:logging:0.1.0",
+                    logging: "com.yubhas:logging:0.1.1",
                     common : "com.yubhas:common:0.1.0",
                     crypto : "com.yubhas:crypto:0.1.0",
-                    email  : "com.yubhas:email-service:0.1.0",
-                    stripe : "com.yubhas:stripe-service:0.1.0",
+                    email  : "com.yubhas:email-service:0.1.1",
+                    stripe : "com.yubhas:stripe-service:0.1.1",
                     eventIt: [
                             domain : "com.yubhas.eventit:domain:0.1.0",
                             repo   : "com.yubhas.eventit:repository:0.1.0",
