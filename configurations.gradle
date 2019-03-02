@@ -4,5 +4,6 @@ configurations {
         exclude module: "commons-logging"
         exclude group: "apache-log4j"
         exclude group: "org.slf4j:slf4j-log4j12"
+        exclude group: "junit"
     }
 }
